@@ -98,7 +98,7 @@ extension Ring {
         let lengthSquared2 = diffX2 * diffX2 + diffY2 * diffY2
         var length2 = Float(0.0)
         
-        if lengthSquared1 > MathKit.Math.epsilon && lengthSquared2 > MathKit.Math.epsilon {
+        if lengthSquared1 > Math.epsilon && lengthSquared2 > Math.epsilon {
             length1 = sqrtf(lengthSquared1)
             length2 = sqrtf(lengthSquared2)
             
@@ -111,7 +111,7 @@ extension Ring {
             diffX = relaxDirectionX1 + relaxDirectionX2
             diffY = relaxDirectionY1 + relaxDirectionY2
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -121,7 +121,7 @@ extension Ring {
                 var proposedX = ringProbePoint.x + relaxDirectionX * relaxMagnitude
                 var proposedY = ringProbePoint.y + relaxDirectionY * relaxMagnitude
                 
-                if MathKit.Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
+                if Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
                                             x2: firstRingPoint.x, y2: firstRingPoint.y,
                                             x3: proposedX, y3: proposedY) {
                     
@@ -146,8 +146,8 @@ extension Ring {
                 // In this case, we have probably a 180 degree angle,
                 // so, we will need to make a small adjustment to both angles...
                 
-                let angle1 = -atan2f(-diffX1, -diffY1) + MathKit.Math.pi_8
-                let angle2 = -atan2f(-diffX2, -diffY2) - MathKit.Math.pi_8
+                let angle1 = -atan2f(-diffX1, -diffY1) + Math.pi_8
+                let angle2 = -atan2f(-diffX2, -diffY2) - Math.pi_8
                 
                 diffX1 = sinf(angle1)
                 diffY1 = -cosf(angle1)
@@ -160,7 +160,7 @@ extension Ring {
                 
                 lengthSquared = diffX * diffX + diffY * diffY
                 
-                if lengthSquared > MathKit.Math.epsilon {
+                if lengthSquared > Math.epsilon {
                     
                     length = sqrtf(lengthSquared)
                     
@@ -170,7 +170,7 @@ extension Ring {
                     var proposedX = ringProbePoint.x + relaxDirectionX * relaxMagnitude
                     var proposedY = ringProbePoint.y + relaxDirectionY * relaxMagnitude
                     
-                    if MathKit.Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
+                    if Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
                                                 x2: firstRingPoint.x, y2: firstRingPoint.y,
                                                 x3: proposedX, y3: proposedY) {
                         
@@ -206,7 +206,7 @@ extension Ring {
             diffY = middlePointY - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
             
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -237,7 +237,7 @@ extension Ring {
             diffY = middlePointY - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
             
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -287,7 +287,7 @@ extension Ring {
         let lengthSquared2 = diffX2 * diffX2 + diffY2 * diffY2
         var length2 = Float(0.0)
         
-        if lengthSquared1 > MathKit.Math.epsilon && lengthSquared2 > MathKit.Math.epsilon {
+        if lengthSquared1 > Math.epsilon && lengthSquared2 > Math.epsilon {
             length1 = sqrtf(lengthSquared1)
             length2 = sqrtf(lengthSquared2)
             
@@ -300,7 +300,7 @@ extension Ring {
             diffX = relaxDirectionX1 + relaxDirectionX2
             diffY = relaxDirectionY1 + relaxDirectionY2
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -310,7 +310,7 @@ extension Ring {
                 var proposedX = ringProbePoint.x + relaxDirectionX * relaxMagnitude
                 var proposedY = ringProbePoint.y + relaxDirectionY * relaxMagnitude
                 
-                if MathKit.Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
+                if Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
                                             x2: firstRingPoint.x, y2: firstRingPoint.y,
                                             x3: proposedX, y3: proposedY) {
                     
@@ -335,8 +335,8 @@ extension Ring {
                 // In this case, we have probably a 180 degree angle,
                 // so, we will need to make a small adjustment to both angles...
                 
-                let angle1 = -atan2f(-diffX1, -diffY1) + MathKit.Math.pi_8
-                let angle2 = -atan2f(-diffX2, -diffY2) - MathKit.Math.pi_8
+                let angle1 = -atan2f(-diffX1, -diffY1) + Math.pi_8
+                let angle2 = -atan2f(-diffX2, -diffY2) - Math.pi_8
                 
                 diffX1 = sinf(angle1)
                 diffY1 = -cosf(angle1)
@@ -349,7 +349,7 @@ extension Ring {
                 
                 lengthSquared = diffX * diffX + diffY * diffY
                 
-                if lengthSquared > MathKit.Math.epsilon {
+                if lengthSquared > Math.epsilon {
                     
                     length = sqrtf(lengthSquared)
                     
@@ -359,7 +359,7 @@ extension Ring {
                     var proposedX = ringProbePoint.x + relaxDirectionX * relaxMagnitude
                     var proposedY = ringProbePoint.y + relaxDirectionY * relaxMagnitude
                     
-                    if MathKit.Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
+                    if Math.triangleIsClockwise(x1: ringProbePoint.x, y1: ringProbePoint.y,
                                                 x2: firstRingPoint.x, y2: firstRingPoint.y,
                                                 x3: proposedX, y3: proposedY) {
                         
@@ -395,7 +395,7 @@ extension Ring {
             diffY = middlePointY - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
             
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -425,7 +425,7 @@ extension Ring {
             diffY = middlePointY - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
             
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -464,7 +464,7 @@ extension Ring {
         var lengthSquared = diffX * diffX + diffY * diffY
         var length = Float(0.0)
         
-        if lengthSquared > MathKit.Math.epsilon {
+        if lengthSquared > Math.epsilon {
             
             length = sqrtf(lengthSquared)
             
@@ -487,8 +487,8 @@ extension Ring {
         let notchX2 = connection.x - connection.ringLineSegmentLeft.directionX * PolyMeshConstants.probePointTooCloseToLineSegment
         let notchY2 = connection.y - connection.ringLineSegmentLeft.directionY * PolyMeshConstants.probePointTooCloseToLineSegment
         
-        let distanceToNotch1 = MathKit.Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX1, y2: notchY1)
-        let distanceToNotch2 = MathKit.Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX2, y2: notchY2)
+        let distanceToNotch1 = Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX1, y2: notchY1)
+        let distanceToNotch2 = Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX2, y2: notchY2)
         
         if distanceToNotch1 < distanceToNotch2 {
             // In this case, we should try notch 1 FIRST
@@ -496,7 +496,7 @@ extension Ring {
             diffX = notchX1 - ringProbePoint.x
             diffY = notchY1 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -519,7 +519,7 @@ extension Ring {
             diffX = notchX2 - ringProbePoint.x
             diffY = notchY2 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -545,7 +545,7 @@ extension Ring {
             diffX = notchX2 - ringProbePoint.x
             diffY = notchY2 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -569,7 +569,7 @@ extension Ring {
             diffX = notchX1 - ringProbePoint.x
             diffY = notchY1 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -607,7 +607,7 @@ extension Ring {
         var lengthSquared = diffX * diffX + diffY * diffY
         var length = Float(0.0)
         
-        if lengthSquared > MathKit.Math.epsilon {
+        if lengthSquared > Math.epsilon {
             
             length = sqrtf(lengthSquared)
             
@@ -630,8 +630,8 @@ extension Ring {
         let notchX2 = connection.x - connection.ringLineSegmentLeft.directionX * PolyMeshConstants.probePointTooCloseToLineSegment
         let notchY2 = connection.y - connection.ringLineSegmentLeft.directionY * PolyMeshConstants.probePointTooCloseToLineSegment
         
-        let distanceToNotch1 = MathKit.Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX1, y2: notchY1)
-        let distanceToNotch2 = MathKit.Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX2, y2: notchY2)
+        let distanceToNotch1 = Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX1, y2: notchY1)
+        let distanceToNotch2 = Math.distanceSquared(x1: ringProbePoint.x, y1: ringProbePoint.y, x2: notchX2, y2: notchY2)
         
         if distanceToNotch1 < distanceToNotch2 {
             // In this case, we should try notch 1 FIRST
@@ -639,7 +639,7 @@ extension Ring {
             diffX = notchX1 - ringProbePoint.x
             diffY = notchY1 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -662,7 +662,7 @@ extension Ring {
             diffX = notchX2 - ringProbePoint.x
             diffY = notchY2 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -687,7 +687,7 @@ extension Ring {
             diffX = notchX2 - ringProbePoint.x
             diffY = notchY2 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 
@@ -711,7 +711,7 @@ extension Ring {
             diffX = notchX1 - ringProbePoint.x
             diffY = notchY1 - ringProbePoint.y
             lengthSquared = diffX * diffX + diffY * diffY
-            if lengthSquared > MathKit.Math.epsilon {
+            if lengthSquared > Math.epsilon {
                 
                 length = sqrtf(lengthSquared)
                 

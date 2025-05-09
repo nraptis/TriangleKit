@@ -12,8 +12,8 @@ public class Ring {
     
     static let maxPointCount = 256
     
-    typealias Point = MathKit.Math.Point
-    typealias Vector = MathKit.Math.Vector
+    typealias Point = Math.Point
+    typealias Vector = Math.Vector
     
     public var ringPoints = [RingPoint]()
     public var ringPointCount = 0
@@ -506,7 +506,7 @@ public class Ring {
         for ringPointIndex in 0..<ringPointCount {
             let ringPoint = ringPoints[ringPointIndex]
             
-            if ringPoint.angularSpan > MathKit.Math.pi4_3 {
+            if ringPoint.angularSpan > Math.pi4_3 {
                 ringPoint.isCornerOutlier = true
             } else {
                 
@@ -515,7 +515,7 @@ public class Ring {
                 
                 let distanceSquared = ringPoint.distanceSquared(x: cornerPointX, y: cornerPointY)
                 
-                if ringPoint.angularSpan > MathKit.Math.pi {
+                if ringPoint.angularSpan > Math.pi {
                     if distanceSquared > outlierDistanceThresholdSquared {
                         ringPoint.isCornerOutlier = true
                     } else {

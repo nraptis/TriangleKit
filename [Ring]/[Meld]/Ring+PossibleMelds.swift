@@ -129,10 +129,10 @@ extension Ring {
             }
         }
         
-        minX -= PolyMeshConstants.possibleMeldStepDistance - PolyMeshConstants.possibleMeldStepDistance - MathKit.Math.epsilon
-        maxX += PolyMeshConstants.possibleMeldStepDistance + PolyMeshConstants.possibleMeldStepDistance + MathKit.Math.epsilon
-        minY -= PolyMeshConstants.possibleMeldStepDistance - PolyMeshConstants.possibleMeldStepDistance - MathKit.Math.epsilon
-        maxY += PolyMeshConstants.possibleMeldStepDistance + PolyMeshConstants.possibleMeldStepDistance + MathKit.Math.epsilon
+        minX -= PolyMeshConstants.possibleMeldStepDistance - PolyMeshConstants.possibleMeldStepDistance - Math.epsilon
+        maxX += PolyMeshConstants.possibleMeldStepDistance + PolyMeshConstants.possibleMeldStepDistance + Math.epsilon
+        minY -= PolyMeshConstants.possibleMeldStepDistance - PolyMeshConstants.possibleMeldStepDistance - Math.epsilon
+        maxY += PolyMeshConstants.possibleMeldStepDistance + PolyMeshConstants.possibleMeldStepDistance + Math.epsilon
         
         purgeMeldProbeSpokes()
         for meldProbePointIndex in 0..<meldProbePointCount {

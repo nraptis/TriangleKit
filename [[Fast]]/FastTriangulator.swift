@@ -10,7 +10,7 @@ import MathKit
 
 class FastTriangulator {
     
-    typealias Point = MathKit.Math.Point
+    typealias Point = Math.Point
     
     struct FastTriangulatorGridNode {
         
@@ -395,7 +395,7 @@ class FastTriangulator {
         let y2 = y + dirY * Self.searchBoxRayLength
         for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
             let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: x,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: x,
                                                      line1Point1Y: y,
                                                      line1Point2X: x2,
                                                      line1Point2Y: y2,
@@ -404,7 +404,7 @@ class FastTriangulator {
                                                      line2Point2X: bucketLineSegment.x2,
                                                      line2Point2Y: bucketLineSegment.y2) {
                 
-                let rayRayResult = MathKit.Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
+                let rayRayResult = Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
                                                            rayOrigin1Y: bucketLineSegment.y1,
                                                            rayNormal1X: bucketLineSegment.normalX,
                                                            rayNormal1Y: bucketLineSegment.normalY,

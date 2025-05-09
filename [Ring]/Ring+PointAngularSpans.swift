@@ -32,7 +32,7 @@ extension Ring {
         
         let ringLineSegmentRight = ringPoint.ringLineSegmentRight!
         
-        let angleDiffHalf = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(ringLineSegmentRight.directionAngle,
+        let angleDiffHalf = Math.distanceBetweenAnglesAbsoluteUnsafe(ringLineSegmentRight.directionAngle,
                                                                              ringPoint.normalAngle)
         ringPoint.angularSpan = angleDiffHalf + angleDiffHalf
         if ringPoint.angularSpan < PolyMeshConstants.illegalTriangleAngleThreshold {
@@ -49,7 +49,7 @@ extension Ring {
         
         // ALternative for testing; we shouldn't really use this here since we already have the angles
         /*
-         ringPoint.angularSpan = MathKit.Math.triangleAngle(x1: ringPoint.neighborLeft!.x,
+         ringPoint.angularSpan = Math.triangleAngle(x1: ringPoint.neighborLeft!.x,
          y1: ringPoint.neighborLeft!.y,
          x2: ringPoint.x,
          y2: ringPoint.y,

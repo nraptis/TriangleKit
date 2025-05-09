@@ -34,17 +34,17 @@ extension Ring {
             for connectionIndex in 0..<ringProbePoint.connectionCount {
                 let connection = ringProbePoint.connections[connectionIndex]
                 
-                ringProbeSegmentBucket.query(minX: min(ringProbePoint.x, connection.x) - MathKit.Math.epsilon,
-                                              maxX: max(ringProbePoint.x, connection.x) + MathKit.Math.epsilon,
-                                              minY: min(ringProbePoint.y, connection.y) - MathKit.Math.epsilon,
-                                              maxY: max(ringProbePoint.y, connection.y) + MathKit.Math.epsilon)
+                ringProbeSegmentBucket.query(minX: min(ringProbePoint.x, connection.x) - Math.epsilon,
+                                              maxX: max(ringProbePoint.x, connection.x) + Math.epsilon,
+                                              minY: min(ringProbePoint.y, connection.y) - Math.epsilon,
+                                              maxY: max(ringProbePoint.y, connection.y) + Math.epsilon)
                 for bucketProbeSegmentIndex in 0..<ringProbeSegmentBucket.ringProbeSegmentCount {
                     let bucketProbeSegment = ringProbeSegmentBucket.ringProbeSegments[bucketProbeSegmentIndex]
                     
                     if ringProbePoint.ringProbeSegmentRight === bucketProbeSegment { continue }
                     if ringProbePoint.ringProbeSegmentLeft === bucketProbeSegment { continue }
                     
-                    if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: connection.x, line1Point1Y: connection.y,
+                    if Math.lineSegmentIntersectsLineSegment(line1Point1X: connection.x, line1Point1Y: connection.y,
                                                              line1Point2X: ringProbePoint.x, line1Point2Y: ringProbePoint.y,
                                                              line2Point1X: bucketProbeSegment.x1, line2Point1Y: bucketProbeSegment.y1,
                                                              line2Point2X: bucketProbeSegment.x2, line2Point2Y: bucketProbeSegment.y2) {
@@ -102,17 +102,17 @@ extension Ring {
             for connectionIndex in 0..<ringProbePoint.connectionCount {
                 let connection = ringProbePoint.connections[connectionIndex]
                 
-                ringProbeSegmentBucket.query(minX: min(ringProbePoint.x, connection.x) - MathKit.Math.epsilon,
-                                              maxX: max(ringProbePoint.x, connection.x) + MathKit.Math.epsilon,
-                                              minY: min(ringProbePoint.y, connection.y) - MathKit.Math.epsilon,
-                                              maxY: max(ringProbePoint.y, connection.y) + MathKit.Math.epsilon)
+                ringProbeSegmentBucket.query(minX: min(ringProbePoint.x, connection.x) - Math.epsilon,
+                                              maxX: max(ringProbePoint.x, connection.x) + Math.epsilon,
+                                              minY: min(ringProbePoint.y, connection.y) - Math.epsilon,
+                                              maxY: max(ringProbePoint.y, connection.y) + Math.epsilon)
                 for bucketProbeSegmentIndex in 0..<ringProbeSegmentBucket.ringProbeSegmentCount {
                     let bucketProbeSegment = ringProbeSegmentBucket.ringProbeSegments[bucketProbeSegmentIndex]
                     
                     if ringProbePoint.ringProbeSegmentRight === bucketProbeSegment { continue }
                     if ringProbePoint.ringProbeSegmentLeft === bucketProbeSegment { continue }
                     
-                    if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: connection.x, line1Point1Y: connection.y,
+                    if Math.lineSegmentIntersectsLineSegment(line1Point1X: connection.x, line1Point1Y: connection.y,
                                                              line1Point2X: ringProbePoint.x, line1Point2Y: ringProbePoint.y,
                                                              line2Point1X: bucketProbeSegment.x1, line2Point1Y: bucketProbeSegment.y1,
                                                              line2Point2X: bucketProbeSegment.x2, line2Point2Y: bucketProbeSegment.y2) {

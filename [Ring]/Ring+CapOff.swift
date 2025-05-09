@@ -88,7 +88,7 @@ extension Ring {
                 let ringPoint0 = ringPoints[0]
                 let ringPoint1 = ringPoints[1]
                 let ringPoint2 = ringPoints[2]
-                let area = MathKit.Math.triangleAreaAbsolute(x1: ringPoint0.x,
+                let area = Math.triangleAreaAbsolute(x1: ringPoint0.x,
                                                      y1: ringPoint0.y,
                                                      x2: ringPoint1.x,
                                                      y2: ringPoint1.y,
@@ -163,7 +163,7 @@ extension Ring {
             }
         }
         
-        var minSpokeAngle = MathKit.Math.pi2
+        var minSpokeAngle = Math.pi2
         var index1 = 0
         var index2 = 1
         while index2 < meldProbeSpokeCount {
@@ -176,7 +176,7 @@ extension Ring {
             let x3 = meldProbeSpoke1.x2
             let y3 = meldProbeSpoke1.y2
             
-            let spokeAngle = MathKit.Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
+            let spokeAngle = Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
             if spokeAngle < PolyMeshConstants.illegalTriangleAngleThreshold { return }
             if spokeAngle < minSpokeAngle { minSpokeAngle = spokeAngle }
             

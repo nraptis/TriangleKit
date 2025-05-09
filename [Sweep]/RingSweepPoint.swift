@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-class RingSweepPoint: MathKit.PointProtocol {
+class RingSweepPoint: PointProtocol {
     var x = Float(0.0)
     var y = Float(0.0)
 }

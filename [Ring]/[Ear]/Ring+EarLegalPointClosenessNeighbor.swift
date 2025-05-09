@@ -16,7 +16,7 @@ extension Ring {
         let splitRingPoint2 = ringPoints[index2]
         let ringPointCount1 = ringPointCount - 1
         
-        let highQualityDistance = (RingSplitQuality.splitQualityPointClosenessNeighborThresholdGreat + MathKit.Math.epsilon)
+        let highQualityDistance = (RingSplitQuality.splitQualityPointClosenessNeighborThresholdGreat + Math.epsilon)
         
         var neighborRingPointIndex2 = index1 - 1
         if neighborRingPointIndex2 == -1 {
@@ -24,7 +24,7 @@ extension Ring {
         }
         let neighborRingPoint2 = ringPoints[neighborRingPointIndex2]
         let neighborDistanceSquared2 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint2.x, neighborRingPoint2.y)
-        if neighborDistanceSquared2 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared2 < Math.epsilon { return false }
         let neighborDistance2 = sqrtf(neighborDistanceSquared2)
         let baselineDistance2 = splitRingPoint1.ringLineSegmentLeft.length
         let difference2 = baselineDistance2 - neighborDistance2
@@ -42,7 +42,7 @@ extension Ring {
         }
         let neighborRingPoint3 = ringPoints[neighborRingPointIndex3]
         let neighborDistanceSquared3 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint3.x, neighborRingPoint3.y)
-        if neighborDistanceSquared3 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared3 < Math.epsilon { return false }
         let neighborDistance3 = sqrtf(neighborDistanceSquared3)
         let baselineDistance3 = splitRingPoint2.ringLineSegmentRight.length
         let difference3 = baselineDistance3 - neighborDistance3

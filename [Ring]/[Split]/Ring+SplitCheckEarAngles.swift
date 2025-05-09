@@ -20,7 +20,7 @@ extension Ring {
             elbowIndex1 = 0
         }
         let elbowRingPoint1 = ringPoints[elbowIndex1]
-        let angle1 = MathKit.Math.triangleAngle(x1: splitRingPoint2.x, y1: splitRingPoint2.y,
+        let angle1 = Math.triangleAngle(x1: splitRingPoint2.x, y1: splitRingPoint2.y,
                                         x2: splitRingPoint1.x, y2: splitRingPoint1.y,
                                         x3: elbowRingPoint1.x, y3: elbowRingPoint1.y)
         if angle1 < PolyMeshConstants.illegalTriangleAngleThreshold {
@@ -32,7 +32,7 @@ extension Ring {
             elbowIndex2 = ringPointCount1
         }
         let elbowRingPoint2 = ringPoints[elbowIndex2]
-        let angle2 = MathKit.Math.triangleAngle(x1: elbowRingPoint2.x, y1: elbowRingPoint2.y,
+        let angle2 = Math.triangleAngle(x1: elbowRingPoint2.x, y1: elbowRingPoint2.y,
                                         x2: splitRingPoint1.x, y2: splitRingPoint1.y,
                                         x3: splitRingPoint2.x, y3: splitRingPoint2.y)
         if angle2 < PolyMeshConstants.illegalTriangleAngleThreshold {
@@ -44,7 +44,7 @@ extension Ring {
             elbowIndex3 = 0
         }
         let elbowRingPoint3 = ringPoints[elbowIndex3]
-        let angle3 = MathKit.Math.triangleAngle(x1: splitRingPoint1.x, y1: splitRingPoint1.y,
+        let angle3 = Math.triangleAngle(x1: splitRingPoint1.x, y1: splitRingPoint1.y,
                                         x2: splitRingPoint2.x, y2: splitRingPoint2.y,
                                         x3: elbowRingPoint3.x, y3: elbowRingPoint3.y)
         if angle3 < PolyMeshConstants.illegalTriangleAngleThreshold {
@@ -56,7 +56,7 @@ extension Ring {
             elbowIndex4 = ringPointCount1
         }
         let elbowRingPoint4 = ringPoints[elbowIndex4]
-        let angle4 = MathKit.Math.triangleAngle(x1: elbowRingPoint4.x, y1: elbowRingPoint4.y,
+        let angle4 = Math.triangleAngle(x1: elbowRingPoint4.x, y1: elbowRingPoint4.y,
                                         x2: splitRingPoint2.x, y2: splitRingPoint2.y,
                                         x3: splitRingPoint1.x, y3: splitRingPoint1.y)
         if angle4 < PolyMeshConstants.illegalTriangleAngleThreshold {

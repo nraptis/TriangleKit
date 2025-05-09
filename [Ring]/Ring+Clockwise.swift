@@ -15,7 +15,7 @@ extension Ring {
         var index1 = ringPointCount - 1
         var index2 = 0
         while index2 < ringPointCount {
-            area += MathKit.Math.cross(x1: ringPoints[index1].x, y1: ringPoints[index1].y,
+            area += Math.cross(x1: ringPoints[index1].x, y1: ringPoints[index1].y,
                                x2: ringPoints[index2].x, y2: ringPoints[index2].y)
             index1 = index2
             index2 += 1
@@ -28,7 +28,7 @@ extension Ring {
         var index1 = ringProbePointCount - 1
         var index2 = 0
         while index2 < ringProbePointCount {
-            area += MathKit.Math.cross(x1: ringProbePoints[index1].x, y1: ringProbePoints[index1].y,
+            area += Math.cross(x1: ringProbePoints[index1].x, y1: ringProbePoints[index1].y,
                                x2: ringProbePoints[index2].x, y2: ringProbePoints[index2].y)
             index1 = index2
             index2 += 1

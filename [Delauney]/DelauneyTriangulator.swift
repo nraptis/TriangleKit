@@ -137,9 +137,9 @@ public final class DelauneyTriangulator {
         epsilon = 0.00001
     }
     
-    func triangulate(points: [MathKit.PointProtocol],
+    func triangulate(points: [PointProtocol],
                      pointCount: Int,
-                     hull: [MathKit.PointProtocol],
+                     hull: [PointProtocol],
                      hullCount: Int,
                      superTriangleSize: Float = 8192) {
         for triangulationPointIndex in 0..<triangulationPointCount {
@@ -810,7 +810,7 @@ public final class DelauneyTriangulator {
                                                   line1Point2: DelauneyTriangulationPoint,
                                                   line2Point1: DelauneyTriangulationPoint,
                                                   line2Point2: DelauneyTriangulationPoint) -> Bool {
-        MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: line1Point1.x,
+        Math.lineSegmentIntersectsLineSegment(line1Point1X: line1Point1.x,
                                               line1Point1Y: line1Point1.y,
                                               line1Point2X: line1Point2.x,
                                               line1Point2Y: line1Point2.y,

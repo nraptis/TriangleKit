@@ -29,8 +29,8 @@ extension Ring {
                 let y2 = meldProbePointAfterLast.y
                 let x3 = meldProbeConnectionFirstAfterLast.x
                 let y3 = meldProbeConnectionFirstAfterLast.y
-                if MathKit.Math.triangleIsClockwise(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3) {
-                    minAfterAngle = MathKit.Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
+                if Math.triangleIsClockwise(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3) {
+                    minAfterAngle = Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
                 } else {
                     minAfterAngle = 0.0
                 }
@@ -41,8 +41,8 @@ extension Ring {
                 let y211 = meldProbeConnectionFirstAfterLast.y
                 let x311 = meldProbeConnectionLast.x
                 let y311 = meldProbeConnectionLast.y
-                let angle11 = MathKit.Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
-                let clockwise11 = MathKit.Math.triangleIsClockwise(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
+                let angle11 = Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
+                let clockwise11 = Math.triangleIsClockwise(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
                 
                 let x112 = possibleMeld.x
                 let y112 = possibleMeld.y
@@ -50,8 +50,8 @@ extension Ring {
                 let y212 = meldProbePointAfterLast.y
                 let x312 = meldProbeConnectionFirstAfterLast.x
                 let y312 = meldProbeConnectionFirstAfterLast.y
-                let angle12 = MathKit.Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
-                let clockwise12 = MathKit.Math.triangleIsClockwise(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
+                let angle12 = Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
+                let clockwise12 = Math.triangleIsClockwise(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
                 
                 let x121 = possibleMeld.x
                 let y121 = possibleMeld.y
@@ -59,8 +59,8 @@ extension Ring {
                 let y221 = meldProbePointAfterLast.y
                 let x321 = meldProbeConnectionLast.x
                 let y321 = meldProbeConnectionLast.y
-                let angle21 = MathKit.Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
-                let clockwise21 = MathKit.Math.triangleIsClockwise(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
+                let angle21 = Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
+                let clockwise21 = Math.triangleIsClockwise(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
                 
                 let x122 = meldProbeConnectionLast.x
                 let y122 = meldProbeConnectionLast.y
@@ -68,8 +68,8 @@ extension Ring {
                 let y222 = meldProbePointAfterLast.y
                 let x322 = meldProbeConnectionFirstAfterLast.x
                 let y322 = meldProbeConnectionFirstAfterLast.y
-                let angle22 = MathKit.Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
-                let clockwise22 = MathKit.Math.triangleIsClockwise(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
+                let angle22 = Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
+                let clockwise22 = Math.triangleIsClockwise(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
 
                 let angle1 = min(angle11, angle12)
                 let angle2 = min(angle21, angle22)
@@ -101,8 +101,8 @@ extension Ring {
                 let x3 = meldProbePointBeforeFirst.x
                 let y3 = meldProbePointBeforeFirst.y
 
-                if MathKit.Math.triangleIsClockwise(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3) {
-                    minBeforeAngle = MathKit.Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
+                if Math.triangleIsClockwise(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3) {
+                    minBeforeAngle = Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
                 } else {
                     minBeforeAngle = 0.0
                 }
@@ -114,8 +114,8 @@ extension Ring {
                 let y211 = meldProbeConnectionFirst.y
                 let x311 = meldProbeConnectionLastAfterFirst.x
                 let y311 = meldProbeConnectionLastAfterFirst.y
-                let angle11 = MathKit.Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
-                let clockwise11 = MathKit.Math.triangleIsClockwise(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
+                let angle11 = Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
+                let clockwise11 = Math.triangleIsClockwise(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
                 
                 let x112 = possibleMeld.x
                 let y112 = possibleMeld.y
@@ -123,8 +123,8 @@ extension Ring {
                 let y212 = meldProbeConnectionLastAfterFirst.y
                 let x312 = meldProbePointBeforeFirst.x
                 let y312 = meldProbePointBeforeFirst.y
-                let angle12 = MathKit.Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
-                let clockwise12 = MathKit.Math.triangleIsClockwise(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
+                let angle12 = Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
+                let clockwise12 = Math.triangleIsClockwise(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
                 
                 let x121 = possibleMeld.x
                 let y121 = possibleMeld.y
@@ -132,8 +132,8 @@ extension Ring {
                 let y221 = meldProbeConnectionFirst.y
                 let x321 = meldProbePointBeforeFirst.x
                 let y321 = meldProbePointBeforeFirst.y
-                let angle21 = MathKit.Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
-                let clockwise21 = MathKit.Math.triangleIsClockwise(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
+                let angle21 = Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
+                let clockwise21 = Math.triangleIsClockwise(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
                 
                 let x122 = meldProbeConnectionFirst.x
                 let y122 = meldProbeConnectionFirst.y
@@ -141,8 +141,8 @@ extension Ring {
                 let y222 = meldProbeConnectionLastAfterFirst.y
                 let x322 = meldProbePointBeforeFirst.x
                 let y322 = meldProbePointBeforeFirst.y
-                let angle22 = MathKit.Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
-                let clockwise22 = MathKit.Math.triangleIsClockwise(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
+                let angle22 = Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
+                let clockwise22 = Math.triangleIsClockwise(x1: x122, y1: y122, x2: x222, y2: y222, x3: x322, y3: y322)
                 
                 let angle1 = min(angle11, angle12)
                 let angle2 = min(angle21, angle22)

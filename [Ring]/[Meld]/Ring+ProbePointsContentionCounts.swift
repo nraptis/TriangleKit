@@ -127,7 +127,7 @@ extension Ring {
             let neighborLeft = ringProbePoint.neighborLeft!
             if neighborLeft.connectionCount > 0 {
                 let neighborLeftLastConnection = neighborLeft.connections[neighborLeft.connectionCount - 1]
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoint.x,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoint.x,
                                                          line1Point1Y: ringProbePoint.y,
                                                          line1Point2X: firstConnection.x,
                                                          line1Point2Y: firstConnection.y,

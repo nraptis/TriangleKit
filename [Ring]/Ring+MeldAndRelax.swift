@@ -77,7 +77,7 @@ extension Ring {
                 if bucketLineSegment.ringPointLeft === connection { continue }
                 if bucketLineSegment.ringPointRight === connection { continue }
                 
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoint.x,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoint.x,
                                                          line1Point1Y: ringProbePoint.y,
                                                          line1Point2X: connection.x,
                                                          line1Point2Y: connection.y,
@@ -269,7 +269,7 @@ extension Ring {
                 var diffX = ringProbePointForward1.x - ringProbePoint.x
                 var diffY = ringProbePointForward1.y - ringProbePoint.y
                 var distance = diffX * diffX + diffY * diffY
-                if distance > MathKit.Math.epsilon {
+                if distance > Math.epsilon {
                     distance = sqrtf(distance)
                     diffX /= distance
                     diffY /= distance
@@ -309,7 +309,7 @@ extension Ring {
                 var diffX = ringProbePointBack1.x - ringProbePoint.x
                 var diffY = ringProbePointBack1.y - ringProbePoint.y
                 var distance = diffX * diffX + diffY * diffY
-                if distance > MathKit.Math.epsilon {
+                if distance > Math.epsilon {
                     distance = sqrtf(distance)
                     diffX /= distance
                     diffY /= distance

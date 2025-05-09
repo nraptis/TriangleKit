@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-public class RingLineSegment: MathKit.PrecomputedLineSegment {
+public class RingLineSegment: PrecomputedLineSegment {
     
     enum ThreatLevel: UInt8, Comparable {
         case none = 0
@@ -55,6 +55,6 @@ public class RingLineSegment: MathKit.PrecomputedLineSegment {
     public var normalAngle = Float(0.0)
     
     func shortestConnectingLineSegmentToLineSegment(_ ringLineSegment: RingLineSegment) -> (point1: Point, point2: Point) {
-        MathKit.Math.lineSegmentShortestConnectingLineSegmentToLineSegment(line1Point1: p1, line1Point2: p2, line2Point1: ringLineSegment.p1, line2Point2: ringLineSegment.p2)
+        Math.lineSegmentShortestConnectingLineSegmentToLineSegment(line1Point1: p1, line1Point2: p2, line2Point1: ringLineSegment.p1, line2Point2: ringLineSegment.p2)
     }
 }

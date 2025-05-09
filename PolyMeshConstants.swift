@@ -31,8 +31,8 @@ public struct PolyMeshConstants {
     static let ringInsetAmountThreatMedium = Float(10.0) * SCALE * POSH_SCALE
     static let ringInsetAmountThreatHigh = Float(8.0) * SCALE * POSH_SCALE
     
-    static let earClipThresholdRegular = MathKit.Math.pi_2
-    static let earClipThresholdCapOff = MathKit.Math.pi3_4
+    static let earClipThresholdRegular = Math.pi_2
+    static let earClipThresholdCapOff = Math.pi3_4
     
     static let sweepLinePointTooClose = Float(6.0) * SCALE * POSH_SCALE
     
@@ -48,9 +48,9 @@ public struct PolyMeshConstants {
     
     static let meldMaxSteps = 8
     
-    static let illegalTriangleAngleThreshold = MathKit.Math.pi_18 // 10 degrees
-    static let illegalTriangleAngleThresholdOpposite = MathKit.Math.pi2 - illegalTriangleAngleThreshold // 350 degrees
-    //static let terribleTriangleAngleThreshold = MathKit.Math.pi_12 // 15 degrees
+    static let illegalTriangleAngleThreshold = Math.pi_18 // 10 degrees
+    static let illegalTriangleAngleThresholdOpposite = Math.pi2 - illegalTriangleAngleThreshold // 350 degrees
+    //static let terribleTriangleAngleThreshold = Math.pi_12 // 15 degrees
     
     static let possibleMeldStepDistance = Float(2.0) * SCALE * POSH_SCALE
     static let capOffNotchStepDistance = Float(2.0) * SCALE * POSH_SCALE

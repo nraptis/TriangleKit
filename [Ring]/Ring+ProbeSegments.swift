@@ -43,16 +43,16 @@ extension Ring {
             //previousRingProbeSegment.colliderSpecialMeld = false
             
             
-            let angularDifferenceAbsolute = MathKit.Math.distanceBetweenAnglesAbsolute(previousRingProbeSegment.normalAngle, currentRingProbeSegment.normalAngle)
+            let angularDifferenceAbsolute = Math.distanceBetweenAnglesAbsolute(previousRingProbeSegment.normalAngle, currentRingProbeSegment.normalAngle)
 
-            if angularDifferenceAbsolute < MathKit.Math.pi_8 {
+            if angularDifferenceAbsolute < Math.pi_8 {
                 
                 previousRingProbeSegment.colliderPointX = (previousRingProbeSegment.x2 + currentRingProbeSegment.x1) * 0.5
                 previousRingProbeSegment.colliderPointY = (previousRingProbeSegment.y2 + currentRingProbeSegment.y1) * 0.5
                 
             } else {
                 
-                let intersectionResult = MathKit.Math.rayIntersectionRay(rayOrigin1X: previousRingProbeSegment.centerX, 
+                let intersectionResult = Math.rayIntersectionRay(rayOrigin1X: previousRingProbeSegment.centerX, 
                                                                  rayOrigin1Y: previousRingProbeSegment.centerY,
                                                                  rayNormal1X: previousRingProbeSegment.normalX,
                                                                  rayNormal1Y: previousRingProbeSegment.normalY,

@@ -25,7 +25,7 @@ extension Ring {
                     let lineSegment = lineSegmentContention.ringLineSegment!
                     
                     let ringPointLeft = lineSegment.ringPointLeft!
-                    if MathKit.Math.polygonIndexDistance(index1: ringPointIndex,
+                    if Math.polygonIndexDistance(index1: ringPointIndex,
                                                  index2: ringPointLeft.ringIndex,
                                                  count: ringPointCount) > 2 {
                         if !ringPoint.possibleSplitsContains(ringPoint: ringPointLeft) {
@@ -44,7 +44,7 @@ extension Ring {
                     } 
                     
                     let ringPointRight = lineSegment.ringPointRight!
-                    if MathKit.Math.polygonIndexDistance(index1: ringPointIndex,
+                    if Math.polygonIndexDistance(index1: ringPointIndex,
                                                  index2: ringPointRight.ringIndex,
                                                  count: ringPointCount) > 2 {
                         if !ringPoint.possibleSplitsContains(ringPoint: ringPointRight) {

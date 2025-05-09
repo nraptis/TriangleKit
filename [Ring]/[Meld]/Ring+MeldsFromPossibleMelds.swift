@@ -46,7 +46,7 @@ extension Ring {
                 meldProbeSpoke.precomputeStep2(x: possibleMeld.x, y: possibleMeld.y)
             }
             
-            var minSpokeAngle = MathKit.Math.pi2
+            var minSpokeAngle = Math.pi2
             if !calculateMeldsFromPossibleMeldsSpokeAngles(possibleMeld: possibleMeld, minSpokeAngle: &minSpokeAngle) {
                 continue
             }
@@ -61,8 +61,8 @@ extension Ring {
                 continue
             }
             
-            var minBeforeAngle = MathKit.Math.pi2
-            var minAfterAngle = MathKit.Math.pi2
+            var minBeforeAngle = Math.pi2
+            var minAfterAngle = Math.pi2
             if !calculateMeldsFromPossibleMeldsEdgeAngles(possibleMeld: possibleMeld,
                                                           meldProbePointFirst: meldProbePointFirst,
                                                           meldProbePointLast: meldProbePointLast,
@@ -105,17 +105,17 @@ extension Ring {
             var wedgeNormalY = preComputedLineSegment1.normalY + preComputedLineSegment2.normalY
             var wedgeNormalLength = wedgeNormalX * wedgeNormalX + wedgeNormalY * wedgeNormalY
             let wedgeAngle: Float
-            if wedgeNormalLength > MathKit.Math.epsilon {
+            if wedgeNormalLength > Math.epsilon {
                 wedgeNormalLength = sqrtf(wedgeNormalLength)
                 wedgeNormalX /= wedgeNormalLength
                 wedgeNormalY /= wedgeNormalLength
-                let normalAngle = -atan2f(wedgeNormalX, wedgeNormalY) - MathKit.Math.pi
-                let halfAngle = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(preComputedLineSegment1.directionAngle,
+                let normalAngle = -atan2f(wedgeNormalX, wedgeNormalY) - Math.pi
+                let halfAngle = Math.distanceBetweenAnglesAbsoluteUnsafe(preComputedLineSegment1.directionAngle,
                                                                          normalAngle)
                 wedgeAngle = halfAngle + halfAngle
                 
             } else {
-                wedgeAngle = MathKit.Math.distanceBetweenAnglesAbsolute(preComputedLineSegment1.normalAngle,
+                wedgeAngle = Math.distanceBetweenAnglesAbsolute(preComputedLineSegment1.normalAngle,
                                                                 preComputedLineSegment2.normalAngle)
             }
             

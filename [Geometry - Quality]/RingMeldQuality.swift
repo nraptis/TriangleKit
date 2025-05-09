@@ -56,23 +56,23 @@ struct RingMeldQuality: CustomStringConvertible, Hashable {
     static let meldQualityMaxSpokeLengthGood = Float(24.0) * PolyMeshConstants.SCALE
     static let meldQualityMaxSpokeLengthGreat = Float(20.0) * PolyMeshConstants.SCALE
 
-    static let meldQualityMinSpokeAngleThresholdGreat = MathKit.Math.pi_6
-    static let meldQualityMinSpokeAngleThresholdGood = MathKit.Math.pi_8
-    static let meldQualityMinSpokeAngleThresholdNormal = MathKit.Math.pi_10
-    static let meldQualityMinSpokeAngleThresholdLow = MathKit.Math.pi_12
-    static let meldQualityMinSpokeAngleThresholdBroken = MathKit.Math.pi_14
+    static let meldQualityMinSpokeAngleThresholdGreat = Math.pi_6
+    static let meldQualityMinSpokeAngleThresholdGood = Math.pi_8
+    static let meldQualityMinSpokeAngleThresholdNormal = Math.pi_10
+    static let meldQualityMinSpokeAngleThresholdLow = Math.pi_12
+    static let meldQualityMinSpokeAngleThresholdBroken = Math.pi_14
     
-    static let meldQualityMinEdgeAngleThresholdGreat = MathKit.Math.pi_6
-    static let meldQualityMinEdgeAngleThresholdGood = MathKit.Math.pi_8
-    static let meldQualityMinEdgeAngleThresholdNormal = MathKit.Math.pi_10
-    static let meldQualityMinEdgeAngleThresholdLow = MathKit.Math.pi_12
-    static let meldQualityMinEdgeAngleThresholdBroken = MathKit.Math.pi_14
+    static let meldQualityMinEdgeAngleThresholdGreat = Math.pi_6
+    static let meldQualityMinEdgeAngleThresholdGood = Math.pi_8
+    static let meldQualityMinEdgeAngleThresholdNormal = Math.pi_10
+    static let meldQualityMinEdgeAngleThresholdLow = Math.pi_12
+    static let meldQualityMinEdgeAngleThresholdBroken = Math.pi_14
     
-    static let meldQualityWedgeAngleThresholdGreat = MathKit.Math.pi_4
-    static let meldQualityWedgeAngleThresholdGood = MathKit.Math.pi_6
-    static let meldQualityWedgeAngleThresholdNormal = MathKit.Math.pi_8
-    static let meldQualityWedgeAngleThresholdLow = MathKit.Math.pi_10
-    static let meldQualityWedgeAngleThresholdBroken = MathKit.Math.pi_12
+    static let meldQualityWedgeAngleThresholdGreat = Math.pi_4
+    static let meldQualityWedgeAngleThresholdGood = Math.pi_6
+    static let meldQualityWedgeAngleThresholdNormal = Math.pi_8
+    static let meldQualityWedgeAngleThresholdLow = Math.pi_10
+    static let meldQualityWedgeAngleThresholdBroken = Math.pi_12
     
     static let meldQualityMaxEdgeLengthBroken = Float(24.0) * PolyMeshConstants.SCALE
     static let meldQualityMaxEdgeLengthLow = Float(22.0) * PolyMeshConstants.SCALE

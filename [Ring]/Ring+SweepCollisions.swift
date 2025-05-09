@@ -23,13 +23,13 @@ extension Ring {
                                              
                                         maxX: maxX,
                                         
-                                        minY: ringSweepLine.position - MathKit.Math.epsilon,
+                                        minY: ringSweepLine.position - Math.epsilon,
                                         
-                                        maxY: ringSweepLine.position + MathKit.Math.epsilon)
+                                        maxY: ringSweepLine.position + Math.epsilon)
             
             for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
                 let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: bucketLineSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: bucketLineSegment.x1,
                                                          line1Point1Y: bucketLineSegment.y1,
                                                          line1Point2X: bucketLineSegment.x2,
                                                          line1Point2Y: bucketLineSegment.y2,
@@ -38,7 +38,7 @@ extension Ring {
                                                          line2Point2X: maxX,
                                                          line2Point2Y: ringSweepLine.position) {
                     
-                    let rayRayResult = MathKit.Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
+                    let rayRayResult = Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
                                                                rayOrigin1Y: bucketLineSegment.y1,
                                                                rayNormal1X: bucketLineSegment.normalX,
                                                                rayNormal1Y: bucketLineSegment.normalY,
@@ -75,16 +75,16 @@ extension Ring {
         for ringSweepLineIndex in 0..<ringSweepLineCount {
             let ringSweepLine = ringSweepLines[ringSweepLineIndex]
             
-            ringLineSegmentBucket.query(minX: ringSweepLine.position - MathKit.Math.epsilon,
+            ringLineSegmentBucket.query(minX: ringSweepLine.position - Math.epsilon,
             
-                                        maxX: ringSweepLine.position + MathKit.Math.epsilon,
+                                        maxX: ringSweepLine.position + Math.epsilon,
                                 
                                         minY: minY,
                                         maxY: maxY)
             
             for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
                 let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: bucketLineSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: bucketLineSegment.x1,
                                                          line1Point1Y: bucketLineSegment.y1,
                                                          line1Point2X: bucketLineSegment.x2,
                                                          line1Point2Y: bucketLineSegment.y2,
@@ -93,7 +93,7 @@ extension Ring {
                                                          line2Point2X: ringSweepLine.position,
                                                          line2Point2Y: maxY) {
                     
-                    let rayRayResult = MathKit.Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
+                    let rayRayResult = Math.rayIntersectionRay(rayOrigin1X: bucketLineSegment.x1,
                                                                rayOrigin1Y: bucketLineSegment.y1,
                                                                rayNormal1X: bucketLineSegment.normalX,
                                                                rayNormal1Y: bucketLineSegment.normalY,

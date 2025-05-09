@@ -29,7 +29,7 @@ extension Ring {
             return false
         }
         
-        if MathKit.Math.polygonIndexDistance(index1: index1, index2: index2, count: ringPointCount) < 2 {
+        if Math.polygonIndexDistance(index1: index1, index2: index2, count: ringPointCount) < 2 {
             return false
         }
         

@@ -9,7 +9,7 @@ import Foundation
 import MathKit
 
 class RingCapOff: PointProtocol {
-    typealias Point = MathKit.Math.Point
+    typealias Point = Math.Point
     var x: Float = 0.0
     var y: Float = 0.0
     var capOffQuality = RingCapOffQuality()

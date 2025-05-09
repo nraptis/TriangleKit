@@ -60,7 +60,7 @@ extension Ring {
                     var closestPoint = ringPoint.ringLineSegmentLeft.closestPoint(x, y)
                     x = closestPoint.x + ringPoint.ringLineSegmentLeft.normalX * ringPoint.baseProbeLength
                     y = closestPoint.y + ringPoint.ringLineSegmentLeft.normalY * ringPoint.baseProbeLength
-                    let distanceToPreviousSquared = MathKit.Math.distanceSquared(x1: x, y1: y, x2: ringPointPrevious.baseProbeX, y2: ringPointPrevious.baseProbeY)
+                    let distanceToPreviousSquared = Math.distanceSquared(x1: x, y1: y, x2: ringPointPrevious.baseProbeX, y2: ringPointPrevious.baseProbeY)
                     
                     let ringProbePoint = PolyMeshPartsFactory.shared.withdrawRingProbePoint()
                     
@@ -115,7 +115,7 @@ extension Ring {
                     x = closestPoint.x + ringPoint.ringLineSegmentRight.normalX * ringPoint.baseProbeLength
                     y = closestPoint.y + ringPoint.ringLineSegmentRight.normalY * ringPoint.baseProbeLength
                     
-                    let distanceToNextSquared = MathKit.Math.distanceSquared(x1: x, y1: y, x2: ringPointNext.baseProbeX, y2: ringPointNext.baseProbeY)
+                    let distanceToNextSquared = Math.distanceSquared(x1: x, y1: y, x2: ringPointNext.baseProbeX, y2: ringPointNext.baseProbeY)
                     
                     let ringProbePoint = PolyMeshPartsFactory.shared.withdrawRingProbePoint()
                     var isShared = false

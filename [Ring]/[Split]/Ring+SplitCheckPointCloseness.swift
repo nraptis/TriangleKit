@@ -22,7 +22,7 @@ extension Ring {
         let splitRingPoint2 = ringPoints[index2]
         let ringPointCount1 = ringPointCount - 1
         
-        let highQualityDistance = (RingSplitQuality.splitQualityPointClosenessNeighborThresholdGreat + MathKit.Math.epsilon)
+        let highQualityDistance = (RingSplitQuality.splitQualityPointClosenessNeighborThresholdGreat + Math.epsilon)
         var neighborRingPointIndex1 = index1 + 1
         if neighborRingPointIndex1 == ringPointCount {
             neighborRingPointIndex1 = 0
@@ -30,7 +30,7 @@ extension Ring {
         let neighborRingPoint1 = ringPoints[neighborRingPointIndex1]
         
         let neighborDistanceSquared1 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint1.x, neighborRingPoint1.y)
-        if neighborDistanceSquared1 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared1 < Math.epsilon { return false }
         let neighborDistance1 = sqrtf(neighborDistanceSquared1)
         let baselineDistance1 = splitRingPoint1.ringLineSegmentRight.length
         let difference1 = baselineDistance1 - neighborDistance1
@@ -52,7 +52,7 @@ extension Ring {
         }
         let neighborRingPoint2 = ringPoints[neighborRingPointIndex2]
         let neighborDistanceSquared2 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint2.x, neighborRingPoint2.y)
-        if neighborDistanceSquared2 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared2 < Math.epsilon { return false }
         let neighborDistance2 = sqrtf(neighborDistanceSquared2)
         let baselineDistance2 = splitRingPoint1.ringLineSegmentLeft.length
         let difference2 = baselineDistance2 - neighborDistance2
@@ -71,7 +71,7 @@ extension Ring {
         }
         let neighborRingPoint3 = ringPoints[neighborRingPointIndex3]
         let neighborDistanceSquared3 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint3.x, neighborRingPoint3.y)
-        if neighborDistanceSquared3 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared3 < Math.epsilon { return false }
         let neighborDistance3 = sqrtf(neighborDistanceSquared3)
         let baselineDistance3 = splitRingPoint2.ringLineSegmentRight.length
         let difference3 = baselineDistance3 - neighborDistance3
@@ -89,7 +89,7 @@ extension Ring {
         }
         let neighborRingPoint4 = ringPoints[neighborRingPointIndex4]
         let neighborDistanceSquared4 = preComputedLineSegment1.distanceSquaredToClosestPoint(neighborRingPoint4.x, neighborRingPoint4.y)
-        if neighborDistanceSquared4 < MathKit.Math.epsilon { return false }
+        if neighborDistanceSquared4 < Math.epsilon { return false }
         let neighborDistance4 = sqrtf(neighborDistanceSquared4)
         let baselineDistance4 = splitRingPoint2.ringLineSegmentLeft.length
         let difference4 = baselineDistance4 - neighborDistance4
@@ -134,10 +134,10 @@ extension Ring {
          ceiling1 = ringPointCount1
          }
          
-         let minX = min(splitRingPoint1.x, splitRingPoint2.x) - RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat - MathKit.Math.epsilon
-         let maxX = max(splitRingPoint1.x, splitRingPoint2.x) + RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat + MathKit.Math.epsilon
-         let minY = min(splitRingPoint1.y, splitRingPoint2.y) - RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat - MathKit.Math.epsilon
-         let maxY = max(splitRingPoint1.y, splitRingPoint2.y) + RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat + MathKit.Math.epsilon
+         let minX = min(splitRingPoint1.x, splitRingPoint2.x) - RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat - Math.epsilon
+         let maxX = max(splitRingPoint1.x, splitRingPoint2.x) + RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat + Math.epsilon
+         let minY = min(splitRingPoint1.y, splitRingPoint2.y) - RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat - Math.epsilon
+         let maxY = max(splitRingPoint1.y, splitRingPoint2.y) + RingSplitQuality.splitQualityPointClosenessDistantThresholdGreat + Math.epsilon
          
          ringLineSegmentBucket.query(minX: minX, maxX: maxX, minY: minY, maxY: maxY)
          

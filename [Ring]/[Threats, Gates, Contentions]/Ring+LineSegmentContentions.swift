@@ -40,7 +40,7 @@ extension Ring {
                 for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
                     let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
                     let ringLineSegmentIndex = Int(bucketLineSegment.ringIndex)
-                    if MathKit.Math.polygonTourCrosses(index: ringLineSegmentIndex, startIndex: pinchGateRightIndex, endIndex: pinchGateLeftIndex) {
+                    if Math.polygonTourCrosses(index: ringLineSegmentIndex, startIndex: pinchGateRightIndex, endIndex: pinchGateLeftIndex) {
                         let distanceSquared = bucketLineSegment.distanceSquaredToClosestPoint(ringPoint.x, ringPoint.y)
                         if distanceSquared <= PolyMeshConstants.ringContentionDistanceSquared  {
                             if isSafeConnection(ringPoint: ringPoint, ringLineSegment: bucketLineSegment) {

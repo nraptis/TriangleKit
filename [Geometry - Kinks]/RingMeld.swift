@@ -8,9 +8,9 @@
 import Foundation
 import MathKit
 
-class RingMeld: MathKit.PointProtocol {
+class RingMeld: PointProtocol {
     
-    typealias Point = MathKit.Math.Point
+    typealias Point = Math.Point
     
     var meldQuality = RingMeldQuality()
     

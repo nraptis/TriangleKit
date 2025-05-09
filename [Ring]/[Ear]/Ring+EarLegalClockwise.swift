@@ -12,7 +12,7 @@ extension Ring {
     
     func measureEarLegalClockwiseHelper(index: Int) -> Bool {
         
-        var area = MathKit.Math.cross(x1: preComputedLineSegment1.x1,
+        var area = Math.cross(x1: preComputedLineSegment1.x1,
                               y1: preComputedLineSegment1.y1,
                               x2: preComputedLineSegment1.x2,
                               y2: preComputedLineSegment1.y2)
@@ -30,7 +30,7 @@ extension Ring {
         while index2 != index {
             let ringPoint1 = ringPoints[index1]
             let ringPoint2 = ringPoints[index2]
-            area += MathKit.Math.cross(x1: ringPoint1.x, y1: ringPoint1.y,
+            area += Math.cross(x1: ringPoint1.x, y1: ringPoint1.y,
                                x2: ringPoint2.x, y2: ringPoint2.y)
             index1 = index2
             index2 += 1

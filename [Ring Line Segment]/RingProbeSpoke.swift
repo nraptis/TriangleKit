@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-class RingProbeSpoke: MathKit.PrecomputedLineSegment {
+class RingProbeSpoke: PrecomputedLineSegment {
     
     var isIllegal = false
     //var isTagged: Bool = false
@@ -53,7 +53,7 @@ class RingProbeSpoke: MathKit.PrecomputedLineSegment {
     }
     
     func shortestConnectingLineSegmentToLineSegment(_ ringLineSegment: RingLineSegment) -> (point1: Point, point2: Point) {
-        MathKit.Math.lineSegmentShortestConnectingLineSegmentToLineSegment(line1Point1: p1, line1Point2: p2, line2Point1: ringLineSegment.p1, line2Point2: ringLineSegment.p2)
+        Math.lineSegmentShortestConnectingLineSegmentToLineSegment(line1Point1: p1, line1Point2: p2, line2Point1: ringLineSegment.p1, line2Point2: ringLineSegment.p2)
     }
     
 }

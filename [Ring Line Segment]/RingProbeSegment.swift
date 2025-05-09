@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-class RingProbeSegment: MathKit.PrecomputedLineSegment {
+class RingProbeSegment: PrecomputedLineSegment {
     
     // The line segment we are spawn'd from...!!!
     //unowned var lineSegment: RingLineSegment!

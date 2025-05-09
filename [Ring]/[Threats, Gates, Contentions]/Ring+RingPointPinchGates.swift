@@ -10,7 +10,7 @@ import MathKit
 
 extension Ring {
     
-    static let pinchGateAngularThreshold = MathKit.Math.pi_2
+    static let pinchGateAngularThreshold = Math.pi_2
     
     func calculateRingPointPinchGates() {
         for ringPointIndex in 0..<ringPointCount {
@@ -51,10 +51,10 @@ extension Ring {
             let checkAngle1 = checkLineSegment.normalAngle
             let checkAngle2 = checkLineSegment.ringPointLeft.normalAngle
             
-            let angleDiff1 = MathKit.Math.distanceBetweenAnglesAbsolute(considerationAngle1, checkAngle1)
-            let angleDiff2 = MathKit.Math.distanceBetweenAnglesAbsolute(considerationAngle1, checkAngle2)
-            let angleDiff3 = MathKit.Math.distanceBetweenAnglesAbsolute(considerationAngle2, checkAngle1)
-            let angleDiff4 = MathKit.Math.distanceBetweenAnglesAbsolute(considerationAngle2, checkAngle2)
+            let angleDiff1 = Math.distanceBetweenAnglesAbsolute(considerationAngle1, checkAngle1)
+            let angleDiff2 = Math.distanceBetweenAnglesAbsolute(considerationAngle1, checkAngle2)
+            let angleDiff3 = Math.distanceBetweenAnglesAbsolute(considerationAngle2, checkAngle1)
+            let angleDiff4 = Math.distanceBetweenAnglesAbsolute(considerationAngle2, checkAngle2)
             
             if angleDiff1 > Self.pinchGateAngularThreshold ||
                 angleDiff2 > Self.pinchGateAngularThreshold ||
@@ -84,10 +84,10 @@ extension Ring {
             let checkAngle1 = checkLineSegment.normalAngle
             let checkAngle2 = checkLineSegment.ringPointRight.normalAngle
             
-            let angleDiff1 = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle1, checkAngle1)
-            let angleDiff2 = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle1, checkAngle2)
-            let angleDiff3 = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle2, checkAngle1)
-            let angleDiff4 = MathKit.Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle2, checkAngle2)
+            let angleDiff1 = Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle1, checkAngle1)
+            let angleDiff2 = Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle1, checkAngle2)
+            let angleDiff3 = Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle2, checkAngle1)
+            let angleDiff4 = Math.distanceBetweenAnglesAbsoluteUnsafe(considerationAngle2, checkAngle2)
             
             if angleDiff1 > Self.pinchGateAngularThreshold ||
                 angleDiff2 > Self.pinchGateAngularThreshold ||
@@ -109,14 +109,14 @@ extension Ring {
         let pinchGateRightIndex = ringPoint.pinchGateRightIndex
         if pinchGateLeftIndex != -1 && pinchGateRightIndex != -1 {
             
-            if MathKit.Math.polygonTourCrosses(index: Int(ringPoint.ringIndex),
+            if Math.polygonTourCrosses(index: Int(ringPoint.ringIndex),
                                        startIndex: pinchGateRightIndex,
                                        endIndex: pinchGateLeftIndex) {
                 ringPoint.pinchGateLeftIndex = -1
                 ringPoint.pinchGateRightIndex = -1
                 ringPoint.pinchGateSpan = 0
             } else {
-                ringPoint.pinchGateSpan = MathKit.Math.polygonTourLength(startIndex: pinchGateRightIndex,
+                ringPoint.pinchGateSpan = Math.polygonTourLength(startIndex: pinchGateRightIndex,
                                                                  endIndex: pinchGateLeftIndex,
                                                                  count: ringPointCount)
             }

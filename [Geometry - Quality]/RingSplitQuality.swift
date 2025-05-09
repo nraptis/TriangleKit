@@ -53,11 +53,11 @@ struct RingSplitQuality: Hashable, CustomStringConvertible {
         }
     }
     
-    static let splitQualityEarAngleThresholdGreat = MathKit.Math.radians(degrees: 70.0)
-    static let splitQualityEarAngleThresholdGood = MathKit.Math.radians(degrees: 60.0)
-    static let splitQualityEarAngleThresholdNormal = MathKit.Math.radians(degrees: 50.0)
-    static let splitQualityEarAngleThresholdLow = MathKit.Math.radians(degrees: 40.0)
-    static let splitQualityEarAngleThresholdBroken = MathKit.Math.radians(degrees: 30.0)
+    static let splitQualityEarAngleThresholdGreat = Math.radians(degrees: 70.0)
+    static let splitQualityEarAngleThresholdGood = Math.radians(degrees: 60.0)
+    static let splitQualityEarAngleThresholdNormal = Math.radians(degrees: 50.0)
+    static let splitQualityEarAngleThresholdLow = Math.radians(degrees: 40.0)
+    static let splitQualityEarAngleThresholdBroken = Math.radians(degrees: 30.0)
     
     static let splitQualityNumberOfPointsThresholdGreat = 8
     static let splitQualityNumberOfPointsThresholdGood = 7

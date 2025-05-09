@@ -43,7 +43,7 @@ extension Ring {
             if considerRingLineSegment.ringPointLeft === ringPoint { continue }
             if considerRingLineSegment.neighborRight === ringLineSegment { continue }
             
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
                                                      line1Point1Y: ringPoint.y,
                                                      line1Point2X: ringLineSegment.x1,
                                                      line1Point2Y: ringLineSegment.y1,
@@ -64,7 +64,7 @@ extension Ring {
             if considerRingLineSegment.ringPointLeft === ringPoint { continue }
             if considerRingLineSegment.neighborLeft === ringLineSegment { continue }
             
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
                                                      line1Point1Y: ringPoint.y,
                                                      line1Point2X: ringLineSegment.x2,
                                                      line1Point2Y: ringLineSegment.y2,
@@ -107,11 +107,11 @@ extension Ring {
                                   splitRingPoint1: RingPoint,
                                   splitRingPoint2: RingPoint) -> Bool {
         
-        if MathKit.Math.polygonIndexDistance(index1: ringPoint.ringIndex, index2: splitRingPoint1.ringIndex, count: ringPointCount) <= 1 {
+        if Math.polygonIndexDistance(index1: ringPoint.ringIndex, index2: splitRingPoint1.ringIndex, count: ringPointCount) <= 1 {
             return true
         }
         
-        if MathKit.Math.polygonIndexDistance(index1: ringPoint.ringIndex, index2: splitRingPoint2.ringIndex, count: ringPointCount) <= 1 {
+        if Math.polygonIndexDistance(index1: ringPoint.ringIndex, index2: splitRingPoint2.ringIndex, count: ringPointCount) <= 1 {
             return true
         }
         
@@ -134,7 +134,7 @@ extension Ring {
             if considerRingLineSegment.ringPointRight === ringPoint { continue }
             if considerRingLineSegment.ringPointLeft === ringPoint { continue }
             
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
                                                      line1Point1Y: ringPoint.y,
                                                      line1Point2X: splitRingPoint1.x,
                                                      line1Point2Y: splitRingPoint1.y,
@@ -154,7 +154,7 @@ extension Ring {
             if considerRingLineSegment.ringPointRight === ringPoint { continue }
             if considerRingLineSegment.ringPointLeft === ringPoint { continue }
             
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoint.x,
                                                      line1Point1Y: ringPoint.y,
                                                      line1Point2X: splitRingPoint2.x,
                                                      line1Point2Y: splitRingPoint2.y,
@@ -171,22 +171,22 @@ extension Ring {
     func isSafeConnectionForEar(ringPoint: RingPoint,
                                 splitRingPoint1: RingPoint,
                                 splitRingPoint2: RingPoint,
-                                splitSegment: MathKit.PrecomputedLineSegment,
+                                splitSegment: PrecomputedLineSegment,
                                 closestX: Float,
                                 closestY: Float) -> Bool {
         
         let distanceToSplitPoint1 = splitRingPoint1.distanceSquared(x: closestX, y: closestY)
-        if distanceToSplitPoint1 <= MathKit.Math.epsilon {
+        if distanceToSplitPoint1 <= Math.epsilon {
             return false
         }
         
         let distanceToSplitPoint2 = splitRingPoint2.distanceSquared(x: closestX, y: closestY)
-        if distanceToSplitPoint2 <= MathKit.Math.epsilon {
+        if distanceToSplitPoint2 <= Math.epsilon {
             return false
         }
         
         let considerRingLineSegment1 = splitRingPoint1.ringLineSegmentRight!
-        if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment1.x1,
+        if Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment1.x1,
                                                  line1Point1Y: considerRingLineSegment1.y1,
                                                  line1Point2X: considerRingLineSegment1.x2,
                                                  line1Point2Y: considerRingLineSegment1.y2,
@@ -197,7 +197,7 @@ extension Ring {
         
         let considerRingLineSegment2 = splitRingPoint1.ringLineSegmentLeft!
         if considerRingLineSegment2 !== considerRingLineSegment1 {
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment2.x1,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment2.x1,
                                                      line1Point1Y: considerRingLineSegment2.y1,
                                                      line1Point2X: considerRingLineSegment2.x2,
                                                      line1Point2Y: considerRingLineSegment2.y2,
@@ -213,7 +213,7 @@ extension Ring {
         let considerRingLineSegment3 = splitRingPoint2.ringLineSegmentRight!
         if considerRingLineSegment3 !== considerRingLineSegment1 &&
             considerRingLineSegment3 !== considerRingLineSegment2 {
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment3.x1,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment3.x1,
                                                      line1Point1Y: considerRingLineSegment3.y1,
                                                      line1Point2X: considerRingLineSegment3.x2,
                                                      line1Point2Y: considerRingLineSegment3.y2,
@@ -229,7 +229,7 @@ extension Ring {
         if considerRingLineSegment4 !== considerRingLineSegment1 &&
             considerRingLineSegment4 !== considerRingLineSegment2 &&
             considerRingLineSegment4 !== considerRingLineSegment3 {
-            if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment4.x1,
+            if Math.lineSegmentIntersectsLineSegment(line1Point1X: considerRingLineSegment4.x1,
                                                      line1Point1Y: considerRingLineSegment4.y1,
                                                      line1Point2X: considerRingLineSegment4.x2,
                                                      line1Point2Y: considerRingLineSegment4.y2,

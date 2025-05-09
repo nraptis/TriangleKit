@@ -15,10 +15,10 @@ extension Ring {
     func containsPointsThatAreTooCloseToLineSegmentsOuterRing() -> Bool {
         for ringPointIndex in 0..<ringPointCount {
             let ringPoint = ringPoints[ringPointIndex]
-            let minX = ringPoint.x - PolyMeshConstants.pointTooCloseOuter - MathKit.Math.epsilon
-            let maxX = ringPoint.x + PolyMeshConstants.pointTooCloseOuter + MathKit.Math.epsilon
-            let minY = ringPoint.y - PolyMeshConstants.pointTooCloseOuter - MathKit.Math.epsilon
-            let maxY = ringPoint.y + PolyMeshConstants.pointTooCloseOuter + MathKit.Math.epsilon
+            let minX = ringPoint.x - PolyMeshConstants.pointTooCloseOuter - Math.epsilon
+            let maxX = ringPoint.x + PolyMeshConstants.pointTooCloseOuter + Math.epsilon
+            let minY = ringPoint.y - PolyMeshConstants.pointTooCloseOuter - Math.epsilon
+            let maxY = ringPoint.y + PolyMeshConstants.pointTooCloseOuter + Math.epsilon
             ringLineSegmentBucket.query(minX: minX, maxX: maxX, minY: minY, maxY: maxY)
             for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
                 let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
@@ -48,10 +48,10 @@ extension Ring {
         
         for ringPointIndex in 0..<ringPointCount {
             let ringPoint = ringPoints[ringPointIndex]
-            let minX = ringPoint.x - PolyMeshConstants.pointTooCloseInner - MathKit.Math.epsilon
-            let maxX = ringPoint.x + PolyMeshConstants.pointTooCloseInner + MathKit.Math.epsilon
-            let minY = ringPoint.y - PolyMeshConstants.pointTooCloseInner - MathKit.Math.epsilon
-            let maxY = ringPoint.y + PolyMeshConstants.pointTooCloseInner + MathKit.Math.epsilon
+            let minX = ringPoint.x - PolyMeshConstants.pointTooCloseInner - Math.epsilon
+            let maxX = ringPoint.x + PolyMeshConstants.pointTooCloseInner + Math.epsilon
+            let minY = ringPoint.y - PolyMeshConstants.pointTooCloseInner - Math.epsilon
+            let maxY = ringPoint.y + PolyMeshConstants.pointTooCloseInner + Math.epsilon
             
             ringLineSegmentBucket.query(minX: minX, maxX: maxX, minY: minY, maxY: maxY)
             for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {

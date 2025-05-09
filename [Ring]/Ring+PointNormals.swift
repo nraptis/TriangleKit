@@ -40,20 +40,20 @@ extension Ring {
         var normalY = ringLineSegmentLeft.normalY + ringLineSegmentRight.normalY
         
         var normalLengthSquared = normalX * normalX + normalY * normalY
-        if normalLengthSquared < MathKit.Math.epsilon {
+        if normalLengthSquared < Math.epsilon {
             
             // In this case, we have probably a 180 degree angle,
             // so, we will need to make a small adjustment to both angles...
             
-            let angle1 = ringLineSegmentLeft.normalAngle + MathKit.Math.pi_8
-            let angle2 = ringLineSegmentRight.normalAngle - MathKit.Math.pi_8
+            let angle1 = ringLineSegmentLeft.normalAngle + Math.pi_8
+            let angle2 = ringLineSegmentRight.normalAngle - Math.pi_8
             
             let diffX = sinf(angle1) + sinf(angle2)
             let diffY = -(cosf(angle1) + cosf(angle2))
             
             normalLengthSquared = diffX * diffX + diffY * diffY
             
-            if normalLengthSquared > MathKit.Math.epsilon {
+            if normalLengthSquared > Math.epsilon {
                 let normalLength = sqrtf(normalLengthSquared)
                 normalX = diffX / normalLength
                 normalY = diffY / normalLength

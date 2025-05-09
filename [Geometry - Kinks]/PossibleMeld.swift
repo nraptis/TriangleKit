@@ -8,8 +8,8 @@
 import Foundation
 import MathKit
 
-class PossibleMeld: MathKit.PointProtocol {
-    typealias Point = MathKit.Math.Point
+class PossibleMeld: PointProtocol {
+    typealias Point = Math.Point
     var x: Float = 0.0
     var y: Float = 0.0
     var point: Point {

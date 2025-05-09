@@ -8,10 +8,10 @@
 import Foundation
 import MathKit
 
-class RingProbePoint: MathKit.PointProtocol {
+class RingProbePoint: PointProtocol {
     
-    typealias Point = MathKit.Math.Point
-    typealias Vector = MathKit.Math.Vector
+    typealias Point = Math.Point
+    typealias Vector = Math.Vector
     
     var x = Float(0.0)
     var y = Float(0.0)

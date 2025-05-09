@@ -13,7 +13,7 @@ extension Ring {
     func calculateMeldsFromPossibleMeldsSpokeAngles(possibleMeld: PossibleMeld,
                                                     minSpokeAngle: inout Float) -> Bool {
         
-        minSpokeAngle = MathKit.Math.pi2
+        minSpokeAngle = Math.pi2
         if meldProbeSpokeCount <= 1 {
             return true
         }
@@ -34,7 +34,7 @@ extension Ring {
             let x3 = meldProbeSpoke1.x2
             let y3 = meldProbeSpoke1.y2
             
-            let spokeAngle = MathKit.Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
+            let spokeAngle = Math.triangleMinimumAngle(x1: x1, y1: y1, x2: x2, y2: y2, x3: x3, y3: y3)
             if spokeAngle < minSpokeAngle {
                 minSpokeAngle = spokeAngle
             }

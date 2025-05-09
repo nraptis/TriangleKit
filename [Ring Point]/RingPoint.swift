@@ -8,12 +8,12 @@
 import Foundation
 import MathKit
 
-public class RingPoint: MathKit.PointProtocol {
+public class RingPoint: PointProtocol {
     
     typealias ThreatLevel = RingLineSegment.ThreatLevel
     
-    typealias Point = MathKit.Math.Point
-    typealias Vector = MathKit.Math.Vector
+    typealias Point = Math.Point
+    typealias Vector = Math.Vector
     
     public var x = Float(0.0)
     public var y = Float(0.0)

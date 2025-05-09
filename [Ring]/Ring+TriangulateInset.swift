@@ -66,8 +66,8 @@ extension Ring {
                 let y211 = lastConnection1.y
                 let x311 = ringProbePoint2.x
                 let y311 = ringProbePoint2.y
-                let angle11 = MathKit.Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
-                let clockwise11 = MathKit.Math.triangleIsClockwise(x1: x111, y1: y111, x2: x311, y2: y311, x3: x211, y3: y211)
+                let angle11 = Math.triangleMinimumAngle(x1: x111, y1: y111, x2: x211, y2: y211, x3: x311, y3: y311)
+                let clockwise11 = Math.triangleIsClockwise(x1: x111, y1: y111, x2: x311, y2: y311, x3: x211, y3: y211)
                 
                 let x112 = ringProbePoint2.x
                 let y112 = ringProbePoint2.y
@@ -75,8 +75,8 @@ extension Ring {
                 let y212 = lastConnection1.y
                 let x312 = firstConnection2.x
                 let y312 = firstConnection2.y
-                let angle12 = MathKit.Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
-                let clockwise12 = MathKit.Math.triangleIsClockwise(x1: x112, y1: y112, x2: x312, y2: y312, x3: x212, y3: y212)
+                let angle12 = Math.triangleMinimumAngle(x1: x112, y1: y112, x2: x212, y2: y212, x3: x312, y3: y312)
+                let clockwise12 = Math.triangleIsClockwise(x1: x112, y1: y112, x2: x312, y2: y312, x3: x212, y3: y212)
                 
                 let x121 = ringProbePoint1.x
                 let y121 = ringProbePoint1.y
@@ -84,7 +84,7 @@ extension Ring {
                 let y221 = lastConnection1.y
                 let x321 = firstConnection2.x
                 let y321 = firstConnection2.y
-                let angle21 = MathKit.Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
+                let angle21 = Math.triangleMinimumAngle(x1: x121, y1: y121, x2: x221, y2: y221, x3: x321, y3: y321)
                 
                 let x122 = ringProbePoint1.x
                 let y122 = ringProbePoint1.y
@@ -92,7 +92,7 @@ extension Ring {
                 let y222 = firstConnection2.y
                 let x322 = ringProbePoint2.x
                 let y322 = ringProbePoint2.y
-                let angle22 = MathKit.Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x322, y2: y322, x3: x222, y3: y222)
+                let angle22 = Math.triangleMinimumAngle(x1: x122, y1: y122, x2: x322, y2: y322, x3: x222, y3: y222)
                 
                 let angle1 = min(angle11, angle12)
                 let angle2 = min(angle21, angle22)

@@ -20,7 +20,7 @@ extension Ring {
                 if bucketLineSegment === ringLineSegment { continue }
                 if bucketLineSegment.neighborLeft === ringLineSegment { continue }
                 if bucketLineSegment.neighborRight === ringLineSegment { continue }
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringLineSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringLineSegment.x1,
                                                          line1Point1Y: ringLineSegment.y1,
                                                          line1Point2X: ringLineSegment.x2,
                                                          line1Point2Y: ringLineSegment.y2,
@@ -45,7 +45,7 @@ extension Ring {
                 if bucketProbeSegment === ringProbeSegment { continue }
                 if bucketProbeSegment.neighborLeft === ringProbeSegment { continue }
                 if bucketProbeSegment.neighborRight === ringProbeSegment { continue }
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbeSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbeSegment.x1,
                                                          line1Point1Y: ringProbeSegment.y1,
                                                          line1Point2X: ringProbeSegment.x2,
                                                          line1Point2Y: ringProbeSegment.y2,
@@ -67,7 +67,7 @@ extension Ring {
             ringLineSegmentBucket.query(ringProbeSegment: ringProbeSegment)
             for bucketLineSegmentIndex in 0..<ringLineSegmentBucket.ringLineSegmentCount {
                 let bucketLineSegment = ringLineSegmentBucket.ringLineSegments[bucketLineSegmentIndex]
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbeSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbeSegment.x1,
                                                          line1Point1Y: ringProbeSegment.y1,
                                                          line1Point2X: ringProbeSegment.x2,
                                                          line1Point2Y: ringProbeSegment.y2,
@@ -89,7 +89,7 @@ extension Ring {
             ringProbeSegmentBucket.query(ringLineSegment: ringLineSegment)
             for bucketProbeSegmentIndex in 0..<ringProbeSegmentBucket.ringProbeSegmentCount {
                 let bucketProbeSegment = ringProbeSegmentBucket.ringProbeSegments[bucketProbeSegmentIndex]
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringLineSegment.x1,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringLineSegment.x1,
                                                          line1Point1Y: ringLineSegment.y1,
                                                          line1Point2X: ringLineSegment.x2,
                                                          line1Point2Y: ringLineSegment.y2,
@@ -115,7 +115,7 @@ extension Ring {
                 var innerMinusOne = outer + 1
                 var inner = innerMinusOne + 1
                 while inner < count {
-                    if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoints[outerMinusOne].x,
+                    if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoints[outerMinusOne].x,
                                                              line1Point1Y: ringPoints[outerMinusOne].y,
                                                              line1Point2X: ringPoints[outer].x,
                                                              line1Point2Y: ringPoints[outer].y,
@@ -134,7 +134,7 @@ extension Ring {
             outerMinusOne = 1
             outer = 2
             while outer < count_1 {
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoints[count_1].x,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringPoints[count_1].x,
                                                          line1Point1Y: ringPoints[count_1].y,
                                                          line1Point2X: ringPoints[0].x,
                                                          line1Point2Y: ringPoints[0].y,
@@ -162,7 +162,7 @@ extension Ring {
                 var innerMinusOne = outer + 1
                 var inner = innerMinusOne + 1
                 while inner < count {
-                    if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoints[outerMinusOne].x,
+                    if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoints[outerMinusOne].x,
                                                              line1Point1Y: ringProbePoints[outerMinusOne].y,
                                                              line1Point2X: ringProbePoints[outer].x,
                                                              line1Point2Y: ringProbePoints[outer].y,
@@ -181,7 +181,7 @@ extension Ring {
             outerMinusOne = 1
             outer = 2
             while outer < count_1 {
-                if MathKit.Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoints[count_1].x,
+                if Math.lineSegmentIntersectsLineSegment(line1Point1X: ringProbePoints[count_1].x,
                                                          line1Point1Y: ringProbePoints[count_1].y,
                                                          line1Point2X: ringProbePoints[0].x,
                                                          line1Point2Y: ringProbePoints[0].y,

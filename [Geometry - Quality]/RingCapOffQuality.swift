@@ -56,11 +56,11 @@ struct RingCapOffQuality: CustomStringConvertible, Hashable {
     static let capOffQualityMaxSpokeLengthGood = Float(19.5) * PolyMeshConstants.SCALE
     static let capOffQualityMaxSpokeLengthGreat = Float(18.0) * PolyMeshConstants.SCALE
 
-    static let capOffQualityMinSpokeAngleThresholdGreat = MathKit.Math.pi_6
-    static let capOffQualityMinSpokeAngleThresholdGood = MathKit.Math.pi_8
-    static let capOffQualityMinSpokeAngleThresholdNormal = MathKit.Math.pi_10
-    static let capOffQualityMinSpokeAngleThresholdLow = MathKit.Math.pi_12
-    static let capOffQualityMinSpokeAngleThresholdBroken = MathKit.Math.pi_14
+    static let capOffQualityMinSpokeAngleThresholdGreat = Math.pi_6
+    static let capOffQualityMinSpokeAngleThresholdGood = Math.pi_8
+    static let capOffQualityMinSpokeAngleThresholdNormal = Math.pi_10
+    static let capOffQualityMinSpokeAngleThresholdLow = Math.pi_12
+    static let capOffQualityMinSpokeAngleThresholdBroken = Math.pi_14
     
     static func classifyMaxDistanceToLineSegment(_ distanceSquared: Float) -> QualityGrade {
         if distanceSquared < (Self.capOffQualityMaxDistanceToLineSegmentGreat * Self.capOffQualityMaxDistanceToLineSegmentGreat) {
