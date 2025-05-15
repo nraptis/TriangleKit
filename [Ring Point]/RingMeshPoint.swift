@@ -45,11 +45,3 @@ extension RingMeshPoint: Hashable {
         hasher.combine(index)
     }
 }
-
-extension RingMeshPoint: CustomStringConvertible {
-    var description: String {
-        let stringX = String(format: "%.2f", x)
-        let stringy = String(format: "%.2f", x)
-        return "CutPoint(\(stringX), \(stringy))"
-    }
-}

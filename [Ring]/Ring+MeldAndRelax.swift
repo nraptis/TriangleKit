@@ -175,6 +175,7 @@ extension Ring {
         
         //TODO: WARNING: HARSH: RE-ENABLED
         //if TOOL_MARKUP_2_ENABLED == false {
+        /*
             if meldPass(ignoreButtressCenters: false) {
                 // we will bobble it back to the relax process, otherwise repeat...
                 
@@ -187,6 +188,7 @@ extension Ring {
                 _ = attemptMeldAndRelaxStartingWithMeld(callDepth: &callDepth)
                 return true
             }
+        */
         //}
         
         
@@ -283,22 +285,8 @@ extension Ring {
                     
                     if proposedDistanceSquaredMax < distanceSquaredMax {
                         
-                        //ringProbeSegmentBucket.remove(ringProbeSegment: ringProbePoint.ringProbeSegmentLeft)
-                        //ringProbeSegmentBucket.remove(ringProbeSegment: ringProbePoint.ringProbeSegmentRight)
-                        
                         ringProbePoint.x = proposedX
                         ringProbePoint.y = proposedY
-                        
-                        //ringProbePoint.ringProbeSegmentLeft.x2 = proposedX
-                        //ringProbePoint.ringProbeSegmentLeft.y2 = proposedY
-                        //ringProbePoint.ringProbeSegmentLeft.precompute()
-                        //ringProbeSegmentBucket.add(ringProbeSegment: ringProbePoint.ringProbeSegmentLeft)
-                        
-                        //ringProbePoint.ringProbeSegmentRight.x1 = proposedX
-                        //ringProbePoint.ringProbeSegmentRight.y1 = proposedY
-                        //ringProbePoint.ringProbeSegmentRight.precompute()
-                        //ringProbeSegmentBucket.add(ringProbeSegment: ringProbePoint.ringProbeSegmentRight)
-                        
                         result = true
                     }
                 }

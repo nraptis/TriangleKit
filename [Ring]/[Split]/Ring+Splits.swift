@@ -62,7 +62,7 @@ extension Ring {
         }
         
         var numberTried = 0
-        let originalCount = ringSplits.count
+        
         while ringSplits.count > 0 {
             if let bestRingSplit = getBestRingSplit() {
                 numberTried += 1

@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-struct RingMeldQuality: CustomStringConvertible, Hashable {
+struct RingMeldQuality: Hashable {
     static func == (lhs: RingMeldQuality, rhs: RingMeldQuality) -> Bool {
         if lhs.maxDistanceToLineSegment != rhs.maxDistanceToLineSegment { return false }
         if lhs.maxSpokeLength != rhs.maxSpokeLength { return false }
@@ -38,10 +38,6 @@ struct RingMeldQuality: CustomStringConvertible, Hashable {
         hasher.combine(minEdgeAngle)
         hasher.combine(wedgeAngle)
         hasher.combine(maxEdgeLength)
-    }
-    
-    var description: String {
-        "{max_ls: \(maxDistanceToLineSegment), max_sp_len: \(maxSpokeLength), min_sp_ang: \(minSpokeAngle), min_ed_ang: \(minEdgeAngle), wedge_ang: \(wedgeAngle) max_ed_len: \(maxEdgeLength)}"
     }
     
     static let meldQualityMaxDistanceToLineSegmentBroken = Float(24.0) * PolyMeshConstants.SCALE

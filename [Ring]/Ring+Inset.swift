@@ -8,11 +8,6 @@
 import Foundation
 
 extension Ring {
-
-    //@Precondition: attemptCalculateBasicsAndDetermineSafetyPartA passed check
-    //@Precondition: attemptCalculateBasicsAndDetermineSafetyPartB passed check
-    //@Precondition: buildRingPointInsidePolygonBucket
-    //@Precondition: buildLineSegmentBucket
     
     func attemptInset(needsContentions: Bool) -> Bool {
     
@@ -29,44 +24,6 @@ extension Ring {
         if !attemptMeldAndRelax() {
             return false
         }
-        
-        /*
-        //applyProbePointTriangulation()
-        if POLY_MESH_INSET_ENABLED {
-            purgeSubrings()
-            if (depth < POLY_MESH_INSET_LEVEL) || (POLY_MESH_INSET_LEVEL < 0) {
-                if ringProbePointCount > 0 {
-                    let subring = PolyMeshPartsFactory.shared.withdrawRing(polyMesh: polyMesh)
-                    
-                    subring.addPointsBegin(depth: depth + 1)
-                    for ringProbePointIndex in 0..<ringProbePointCount {
-                        let ringProbePoint = ringProbePoints[ringProbePointIndex]
-                        
-                        subring.addPoint(ringProbePoint.x, ringProbePoint.y)
-                    }
-                    
-                    if !subring.attemptCalculateBasicsAndDetermineSafetyPartA(test: false) {
-                        PolyMeshPartsFactory.shared.depositRing(subring)
-                        return false
-                    }
-                    
-                    if !subring.attemptCalculateBasicsAndDetermineSafetyPartB(needsPointInsidePolygonBucket: true,
-                                                                              needsLineSegmentBucket: true,
-                                                                              test: false) {
-                        PolyMeshPartsFactory.shared.depositRing(subring)
-                        return false
-                    }
-                    
-                    calculateInsetTriangulation()
-                    
-                    PolyMeshPartsFactory.shared.depositRingContent(self)
-
-                    addSubring(subring)
-                    return true
-                }
-            }
-        }
-        */
 
         purgeSubrings()
         if ringProbePointCount > 0 {

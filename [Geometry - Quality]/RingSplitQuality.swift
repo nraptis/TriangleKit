@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-struct RingSplitQuality: Hashable, CustomStringConvertible {
+struct RingSplitQuality: Hashable {
     var earAngle = QualityGrade.great
     var pointClosenessNeighbor = QualityGrade.great
     var pointClosenessDistant = QualityGrade.great
@@ -34,10 +34,6 @@ struct RingSplitQuality: Hashable, CustomStringConvertible {
         hasher.combine(numberOfPoints)
         hasher.combine(splitLengthMax)
         hasher.combine(splitLengthMin)
-    }
-    
-    var description: String {
-        "{ear: \(earAngle), close_n: \(pointClosenessNeighbor), close_d: \(pointClosenessDistant), num: \(numberOfPoints), len_max: \(splitLengthMax), len_min: \(splitLengthMin)}"
     }
     
     private(set) var weight = 0

@@ -7,30 +7,13 @@
 
 import Foundation
 
-enum QualityGrade: UInt8, Comparable, CustomStringConvertible, CaseIterable, Hashable {
-    
+enum QualityGrade: UInt8, Comparable, CaseIterable, Hashable {
     case excellent = 6
     case great = 5
     case good = 4
     case normal = 3
     case low = 2
     case broken = 1
-    var description: String {
-        switch self {
-        case .excellent:
-            return "A"
-        case .great:
-            return "B"
-        case .good:
-            return "C"
-        case .normal:
-            return "D"
-        case .low:
-            return "E"
-        case .broken:
-            return "F"
-        }
-    }
     
     static var random: QualityGrade {
         let number = Int.random(in: 0...5)

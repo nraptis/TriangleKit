@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import os.signpost
-import OSLog
 import MathKit
 
 extension Ring {
@@ -78,30 +76,6 @@ extension Ring {
         
         return true
     }
-    
-    /*
-    func buildSafeConnectionForSplitGrid() {
-        
-        while safeConnectionForSplitGrid.count < ringPointCount {
-            safeConnectionForSplitGrid.append([Bool]())
-        }
-        for x in 0..<ringPointCount {
-            while safeConnectionForSplitGrid[x].count < ringPointCount {
-                safeConnectionForSplitGrid[x].append(false)
-            }
-        }
-        for x in 0..<ringPointCount {
-            for y in 0..<ringPointCount {
-                
-            }
-        }
-        
-        var safeConnectionForSplitGrid = [[Bool]]()
-        var safeConnectionForSplitGridWidth = 0
-        var safeConnectionForSplitGridHeight = 0
-        
-    }
-    */
     
     func isSafeConnectionForSplit(ringPoint: RingPoint,
                                   splitRingPoint1: RingPoint,

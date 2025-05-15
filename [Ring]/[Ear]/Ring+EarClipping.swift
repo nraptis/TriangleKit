@@ -14,22 +14,7 @@ extension Ring {
         if ringPointCount <= 3 {
             return false
         }
-        
-        /*
-        if POLY_MESH_MONO_EARS_ENABLED {
-            if depth == POLY_MESH_MONO_EARS_LEVEL {
-            } else {
-                return false
-            }
-        } else {
-            if POLY_MESH_OMNI_EARS_ENABLED && (depth <= POLY_MESH_OMNI_EARS_LEVEL) {
-                
-            } else {
-                return false
-            }
-        }
-        */
-        
+
         var bestEarIndex = -1
         var worstEarAngle = Float(100_000_000.0)
         for ringPointIndex in 0..<ringPointCount {

@@ -15,15 +15,6 @@ extension Ring {
         //purgeProbePoints()
         ringProbePointCount = 0
         
-        //var baseProbeX = Float(0.0)
-        //var baseProbeY = Float(0.0)
-        //var baseProbeLength = Float(0.0)
-        
-        
-        //var ringPointIndexPrevious = ringPointCount - 1
-        //var ringPointIndex = 0
-        //var ringPointNext = 1
-        
         for ringPointIndex in 0..<ringPointCount {
             
             let ringPoint = ringPoints[ringPointIndex]
@@ -39,7 +30,6 @@ extension Ring {
         for ringPointIndex in 0..<ringPointCount {
             
             let ringPoint = ringPoints[ringPointIndex]
-            
             if ringPoint.isCornerOutlier {
                 
                 var ringPointIndexPrevious = ringPointIndex - 1

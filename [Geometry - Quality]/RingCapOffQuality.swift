@@ -8,7 +8,7 @@
 import Foundation
 import MathKit
 
-struct RingCapOffQuality: CustomStringConvertible, Hashable {
+struct RingCapOffQuality: Hashable {
     static func == (lhs: RingCapOffQuality, rhs: RingCapOffQuality) -> Bool {
         if lhs.maxDistanceToLineSegment != rhs.maxDistanceToLineSegment { return false }
         if lhs.minDistanceToLineSegment != rhs.minDistanceToLineSegment { return false }
@@ -32,10 +32,6 @@ struct RingCapOffQuality: CustomStringConvertible, Hashable {
         hasher.combine(minDistanceToLineSegment)
         hasher.combine(maxSpokeLength)
         hasher.combine(minSpokeAngle)
-    }
-    
-    var description: String {
-        "{max_ls: \(maxDistanceToLineSegment), min_ls: \(minDistanceToLineSegment), max_sp_len: \(maxSpokeLength), min_sp_ang: \(minSpokeAngle)}"
     }
     
     static let capOffQualityMaxDistanceToLineSegmentBroken = Float(23.0) * PolyMeshConstants.SCALE

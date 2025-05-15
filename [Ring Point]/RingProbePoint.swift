@@ -39,11 +39,6 @@ class RingProbePoint: PointProtocol {
     
     var isRelaxable = false
     var isRelaxDirectionComputed = false
-    
-    
-    //var meldStreak = 0
-    //var meldHopsRight = 0
-    //var meldHopsLeft = 0
 
     var firstConnectionSpoke = AnyPrecomputedLineSegment()
     var lastConnectionSpoke = AnyPrecomputedLineSegment()
@@ -73,25 +68,13 @@ class RingProbePoint: PointProtocol {
         }
     }
     
-    
-    //var isContendingRight = false
     var meldContentionCount = 0
-    
-    
-    //var isContendingLeft = false
-    
-    
-    //var isTooCloseRight = false
-    //var isTooCloseLeft = false
-    //var nudgeType = NudgeType.none
     
     unowned var ringProbeSegmentLeft: RingProbeSegment!
     unowned var ringProbeSegmentRight: RingProbeSegment!
     
     unowned var neighborLeft: RingProbePoint!
     unowned var neighborRight: RingProbePoint!
-    
-    //var probeSegmentContentions = [ProbeSegmentContention]()
     
     var point: Point {
         Point(x: x,
@@ -111,23 +94,14 @@ class RingProbePoint: PointProtocol {
     }
     
     func setup(x: Float, y: Float) {
-        //polyMesh = ringPoint.polyMesh
-        //ring = ringPoint.ring
-        
-        //self.ringPoint = ringPoint
         self.x = x
         self.y = y
-        //self.ringIndex = ringIndex
-        
     }
     
     func writeTo(_ ringProbePoint: RingProbePoint) {
-        
         ringProbePoint.x = x
         ringProbePoint.y = y
-        
         ringProbePoint.isButtressCenter = isButtressCenter
-        
         ringProbePoint.connectionCount = 0
         for connectionIndex in 0..<connectionCount {
             let connection = connections[connectionIndex]
@@ -152,22 +126,11 @@ class RingProbePoint: PointProtocol {
     
 }
 
-extension RingProbePoint: CustomStringConvertible {
-    var description: String {
-        let stringX = String(format: "%.2f", x)
-        let stringy = String(format: "%.2f", x)
-        return "ProbePoint(\(stringX), \(stringy))"
-    }
-}
-
 extension RingProbePoint: Hashable {
     static func == (lhs: RingProbePoint, rhs: RingProbePoint) -> Bool {
         lhs === rhs
     }
-    
     func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self))
     }
-    
-    
 }
